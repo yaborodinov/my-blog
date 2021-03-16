@@ -3,9 +3,57 @@
     height: 100vh;
      
     background-color: rgb(133, 122, 122);
+    box-shadow: 5px 0 15px rgba(#050505, .1);
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: $z-index-sidebar;
+}
+
+.sidebar__header{
+    height: 180px;
+    overflow: hidden;
+    background-color: $secondary;
+    img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+}
+
+.social__link_bg{
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
+}
+.instagram{
+    background-image: url(../images/instagram.png);
+}
+.linkedin{
+    background-image: url(../images/linkedin.svg);
+}
+.pinterest{
+    background-image: url(../images/pinterest.png);
+}
+
+.sidebar__content{
+    padding: 0 2rem;
+    margin-top: -5rem;
+}
+.profile__text{
+    padding:  3rem 0 ;
+    margin:  3rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+
+    border-top: 1px solid #1c1c1c;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.sidebar__footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
 }
