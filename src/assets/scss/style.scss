@@ -8,7 +8,7 @@ html{
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: #968c8c;
+    background-color: #181818;
     font-size: 1.4rem;
     color: $white;
     line-height: 1.5;
@@ -34,6 +34,10 @@ body {
 @import "blocks/btn.scss";
 @import "blocks/stories.scss";
 @import "blocks/add-post.scss";
+@import "blocks/post";
+@import "blocks/embed";
+
+
 
 
 
