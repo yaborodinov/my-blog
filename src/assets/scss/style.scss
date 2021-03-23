@@ -20,6 +20,14 @@ body {
     box-sizing: border-box;
 }
 
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
 // blocks
 @import "blocks/header.scss";
 @import "blocks/sidebar";
@@ -37,6 +45,12 @@ body {
 @import "blocks/post";
 @import "blocks/embed";
 @import "blocks/pagination";
+@import "blocks/related";
+@import "blocks/comments";
+@import "blocks/form";
+
+
+
 
 
 
