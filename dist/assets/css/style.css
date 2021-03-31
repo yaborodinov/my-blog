@@ -364,6 +364,10 @@ body {
     line-height: 1.5;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -670,7 +674,7 @@ a:hover {
     box-shadow: 0 7px 17px -10px rgba(237, 48, 36, 0.3);
 }
 
-.btn--red:hover {
+.btn--red:hover, .btn--red:focus {
     background-color: #db1e12;
 }
 
@@ -679,7 +683,7 @@ a:hover {
     box-shadow: 0 7px 17px -10px rgba(49, 55, 201, 0.3);
 }
 
-.btn--blue:hover {
+.btn--blue:hover, .btn--blue:focus {
     background-color: #2a2fac;
 }
 
@@ -1371,5 +1375,80 @@ a:hover {
 }
 
 .cabinet__file:hover {
+    text-decoration: none;
+}
+
+.modal {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+}
+
+.modal__content {
+    width: 100%;
+    max-width: 500px;
+    padding: 8rem 8rem 2.5rem;
+    background-color: #202020;
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal__content--contact {
+    padding-bottom: 2.5rem;
+}
+
+.modal__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.modal__close:hover {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.madal__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    color: #b2b2b2;
+}
+
+.madal__footer li {
+    margin: 0 0.5rem;
+}
+
+.madal__footer a {
+    margin: 0 0.5rem;
+    color: inherit;
+    text-decoration: underline;
+}
+
+.madal__footer a:hover {
     text-decoration: none;
 }

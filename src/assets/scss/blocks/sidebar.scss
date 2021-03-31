@@ -27,6 +27,10 @@
     width: 25px;
     height: 25px;
     background-size: 100%;
+    &--bigger{
+        width: 45px;
+        height: 45px;
+    }
 }
 .instagram{
     background-image: url(../images/instagram.svg);
@@ -37,6 +41,7 @@
 .facebook{
     background-image: url(../images/facebook.svg);
 }
+
 
 .sidebar__content{
     padding: 0 2rem;
