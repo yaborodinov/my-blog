@@ -544,6 +544,12 @@ a {
   color: #fff; }
   .search__input::placeholder {
     color: rgba(255, 255, 255, 0.4); }
+  @media screen and (max-width: 991px) {
+    .search__input {
+      height: 4rem;
+      font-size: 1.6rem;
+      padding-top: 0.9rem;
+      padding-bottom: 0.9rem; } }
 
 .subnav {
   display: none;
