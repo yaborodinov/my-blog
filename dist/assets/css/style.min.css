@@ -591,8 +591,7 @@ a {
   padding: 10rem 0 8rem 300px; }
   @media screen and (max-width: 991px) {
     .main {
-      padding-left: 0;
-      padding-top: 7rem; } }
+      padding: 7rem 0 5rem; } }
 
 .container {
   max-width: 70rem;
@@ -799,6 +798,9 @@ a {
   background-color: #121212;
   border-radius: 5px;
   padding: 1.5rem 2rem; }
+  @media screen and (max-width: 575px) {
+    .add-post {
+      padding: 1.5rem; } }
 
 .add-post__form {
   display: flex;
@@ -824,6 +826,9 @@ a {
   flex-shrink: 0;
   display: flex;
   justify-content: space-around; }
+  @media screen and (max-width: 575px) {
+    .add-post__form-actions {
+      width: 9rem; } }
 
 .add-post__file,
 .add-post__send {
@@ -834,6 +839,11 @@ a {
   cursor: pointer;
   border: none;
   transition: backrgound-color 0.2s linear; }
+  @media screen and (max-width: 575px) {
+    .add-post__file,
+    .add-post__send {
+      width: 3.4rem;
+      height: 3.4rem; } }
 
 .add-post__file {
   background: #ebebeb url("../images/add-photo.svg") center no-repeat; }
@@ -841,11 +851,19 @@ a {
     display: none; }
   .add-post__file:hover {
     background-color: #dedede; }
+  @media screen and (max-width: 575px) {
+    .add-post__file {
+      background-size: 18px; } }
 
 .add-post__send {
-  background-color: #3137C9; }
+  font-size: 0;
+  color: transparent;
+  background: #3137C9 url("../images/send.svg") center no-repeat; }
   .add-post__send:hover {
     background-color: #2c31b4; }
+  @media screen and (max-width: 575px) {
+    .add-post__send {
+      background-size: 15px; } }
 
 .post {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
@@ -854,6 +872,9 @@ a {
   padding: 2.5rem;
   border-radius: 5px;
   overflow: hidden; }
+  @media screen and (max-width: 575px) {
+    .post {
+      padding: 1.5rem; } }
 
 .post__header {
   margin: 0 0 2.5rem; }
@@ -872,7 +893,8 @@ a {
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   color: #fff;
-  font-weight: 500; }
+  font-weight: 500;
+  line-height: 1.4; }
   .post__title a {
     color: inherit; }
   .post__title--mb0 {
@@ -926,6 +948,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 575px) {
+    .post__footer {
+      flex-direction: column;
+      align-items: flex-start; } }
 
 .post__data {
   color: #828282;
@@ -933,6 +959,10 @@ a {
   display: flex; }
   .post__data a {
     color: inherit; }
+  @media screen and (max-width: 575px) {
+    .post__data {
+      margin-bottom: 1rem;
+      font-size: 1.2rem; } }
 
 .post__data-item:not(:last-child)::after {
   content: "";
@@ -997,6 +1027,9 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 8rem; }
+  @media screen and (max-width: 991px) {
+    .pagination {
+      margin-top: 5rem; } }
 
 .pagination__item {
   margin: 0 .5rem; }
