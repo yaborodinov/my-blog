@@ -16,7 +16,7 @@
         color: rgba($white, 0.4);
     }
 
-    @include breakpoint($tablet-bp){
+    @include breakpoint($mobile-bp){
         height: 4rem;
         font-size: 1.6rem;
         padding-top: 0.9rem;

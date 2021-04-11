@@ -354,7 +354,7 @@ a {
 
 .header__left {
   width: 60%; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 575px) {
     .header__left {
       width: 40%; } }
 
@@ -362,7 +362,7 @@ a {
   width: 40%;
   display: flex;
   justify-content: flex-end; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 575px) {
     .header__right {
       width: 60%; } }
 
@@ -544,7 +544,7 @@ a {
   color: #fff; }
   .search__input::placeholder {
     color: rgba(255, 255, 255, 0.4); }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 575px) {
     .search__input {
       height: 4rem;
       font-size: 1.6rem;
@@ -591,14 +591,15 @@ a {
   padding: 10rem 0 8rem 300px; }
   @media screen and (max-width: 991px) {
     .main {
-      padding-left: 0; } }
+      padding-left: 0;
+      padding-top: 7rem; } }
 
 .container {
   max-width: 70rem;
   margin: 0 auto;
   padding-left: 5rem;
   padding-right: 5rem; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 575px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem; } }
@@ -737,6 +738,10 @@ a {
   grid-column-gap: 13px;
   grid-template-rows: 195px;
   margin-bottom: 3rem; }
+  @media screen and (max-width: 991px) {
+    .stories {
+      grid-template-columns: 140px 140px 140px 140px;
+      overflow: auto; } }
 
 .stories__item {
   position: relative;
