@@ -436,6 +436,11 @@ a:hover {
     background-size: 100%;
 }
 
+.social__link_bg--bigger {
+    width: 45px;
+    height: 45px;
+}
+
 .instagram {
     background-image: url(../images/instagram.svg);
 }
@@ -1400,7 +1405,7 @@ a:hover {
 .modal__content {
     width: 100%;
     max-width: 500px;
-    padding: 8rem 8rem 2.5rem;
+    padding: 8rem;
     background-color: #202020;
     border-radius: 5px;
     position: relative;
