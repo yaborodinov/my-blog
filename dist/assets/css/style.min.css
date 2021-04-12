@@ -1316,6 +1316,8 @@ a {
   z-index: 110;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem; }
+  .modal.show {
+    display: flex; }
 
 .modal__content {
   width: 100%;
@@ -1323,9 +1325,15 @@ a {
   padding: 8rem;
   background-color: #202020;
   border-radius: 5px;
-  position: relative; }
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform .2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0; }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
+  .modal__content--story {
+    padding: 0;
+    background: none; }
 
 .modal__close {
   position: absolute;
@@ -1354,3 +1362,7 @@ a {
     text-decoration: underline; }
     .madal__footer a:hover {
       text-decoration: none; }
+
+.modal__video {
+  display: block;
+  margin: 0 auto; }
