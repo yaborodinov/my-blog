@@ -808,13 +808,13 @@ a {
 
 .add-post__form {
   display: flex;
-  align-items: center; }
+  align-items: flex-end; }
 
 .add-post__textarea {
   display: block;
   flex-grow: 1;
   width: 80%;
-  height: 30px;
+  height: 34px;
   border: none;
   background: transparent;
   resize: none;
@@ -1169,7 +1169,7 @@ a {
     width: 100%; }
   .form__control--textarea {
     overflow: hidden;
-    height: 30px;
+    height: 32px;
     resize: none; }
 
 .form__line {
