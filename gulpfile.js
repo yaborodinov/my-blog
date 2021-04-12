@@ -17,6 +17,7 @@ const notify = require("gulp-notify");
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
+var ghPages = require('gulp-gh-pages');
 
 
 /* Paths */
@@ -251,3 +252,10 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
+
+
+
+gulp.task('deploy', function () {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
