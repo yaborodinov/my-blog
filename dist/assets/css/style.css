@@ -404,7 +404,7 @@ a:hover {
     width: 60%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 575px) {
     .header__left {
         width: 40%;
     }
@@ -418,7 +418,7 @@ a:hover {
     justify-content: flex-end;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 575px) {
     .header__right {
         width: 60%;
     }
@@ -712,6 +712,15 @@ a:hover {
     color: rgba(255, 255, 255, 0.4);
 }
 
+@media screen and (max-width: 575px) {
+    .search__input {
+        height: 4rem;
+        font-size: 1.6rem;
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+    }
+}
+
 .subnav {
     display: none;
     width: 16.5rem;
@@ -766,7 +775,7 @@ a:hover {
 
 @media screen and (max-width: 991px) {
     .main {
-        padding-left: 0;
+        padding: 7rem 0 5rem;
     }
 }
 
@@ -777,7 +786,7 @@ a:hover {
     padding-right: 5rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 575px) {
     .container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -978,6 +987,13 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 991px) {
+    .stories {
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
+}
+
 .stories__item {
     position: relative;
     background-color: #ccc;
@@ -1049,6 +1065,12 @@ a:hover {
     padding: 1.5rem 2rem;
 }
 
+@media screen and (max-width: 575px) {
+    .add-post {
+        padding: 1.5rem;
+    }
+}
+
 .add-post__form {
     display: -ms-flexbox;
     display: flex;
@@ -1085,6 +1107,12 @@ a:hover {
     justify-content: space-around;
 }
 
+@media screen and (max-width: 575px) {
+    .add-post__form-actions {
+        width: 9rem;
+    }
+}
+
 .add-post__file,
 .add-post__send {
     display: block;
@@ -1094,6 +1122,14 @@ a:hover {
     cursor: pointer;
     border: none;
     transition: backrgound-color 0.2s linear;
+}
+
+@media screen and (max-width: 575px) {
+    .add-post__file,
+    .add-post__send {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
 }
 
 .add-post__file {
@@ -1108,12 +1144,26 @@ a:hover {
     background-color: #dedede;
 }
 
+@media screen and (max-width: 575px) {
+    .add-post__file {
+        background-size: 18px;
+    }
+}
+
 .add-post__send {
-    background-color: #3137C9;
+    font-size: 0;
+    color: transparent;
+    background: #3137C9 url("../images/send.svg") center no-repeat;
 }
 
 .add-post__send:hover {
     background-color: #2c31b4;
+}
+
+@media screen and (max-width: 575px) {
+    .add-post__send {
+        background-size: 15px;
+    }
 }
 
 .post {
@@ -1123,6 +1173,12 @@ a:hover {
     padding: 2.5rem;
     border-radius: 5px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 575px) {
+    .post {
+        padding: 1.5rem;
+    }
 }
 
 .post__header {
@@ -1148,6 +1204,7 @@ a:hover {
     font-size: 1.8rem;
     color: #fff;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .post__title a {
@@ -1236,6 +1293,15 @@ a:hover {
     align-items: center;
 }
 
+@media screen and (max-width: 575px) {
+    .post__footer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
 .post__data {
     color: #828282;
     line-height: 1.2;
@@ -1245,6 +1311,13 @@ a:hover {
 
 .post__data a {
     color: inherit;
+}
+
+@media screen and (max-width: 575px) {
+    .post__data {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
 }
 
 .post__data-item:not(:last-child)::after {
@@ -1329,6 +1402,12 @@ a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 8rem;
+}
+
+@media screen and (max-width: 991px) {
+    .pagination {
+        margin-top: 5rem;
+    }
 }
 
 .pagination__item {

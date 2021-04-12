@@ -897,8 +897,8 @@ a {
   line-height: 1.4; }
   .post__title a {
     color: inherit; }
-  .post__title--mb0 {
-    margin-bottom: 0; }
+  .post__title--open {
+    margin-bottom: 0.75r; }
 
 .post__subtitle {
   font-size: 1.6rem;
@@ -1060,10 +1060,16 @@ a {
 .related__list {
   display: flex;
   flex-wrap: wrap; }
+  @media screen and (max-width: 575px) {
+    .related__list {
+      flex-direction: column; } }
 
 .related__list-item {
   margin-bottom: 2.5rem;
   width: 50%; }
+  @media screen and (max-width: 575px) {
+    .related__list-item {
+      width: 100%; } }
 
 .related__list-title {
   font-size: 1.4rem;
@@ -1087,6 +1093,9 @@ a {
   .comments__item > .comments {
     padding-left: 3rem;
     margin-top: 3rem; }
+    @media screen and (max-width: 575px) {
+      .comments__item > .comments {
+        padding-left: 1.5rem; } }
 
 .comments__header {
   display: flex;
