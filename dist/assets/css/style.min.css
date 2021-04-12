@@ -326,8 +326,11 @@ body {
   font-size: 1.4rem;
   color: #fff;
   line-height: 1.5; }
-  body.no-scroll, body.show-sidebar {
+  body.no-scroll {
     overflow: hidden; }
+  @media screen and (max-width: 575px) {
+    body.show-sidebar {
+      overflow: hidden; } }
 
 *,
 *:before,
@@ -611,17 +614,7 @@ a {
   justify-content: center; }
   @media screen and (max-width: 991px) {
     .show-sidebar .page {
-      position: relative; }
-      .show-sidebar .page::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 20; } }
+      position: relative; } }
 
 .page__title {
   margin-bottom: 3rem;
@@ -629,6 +622,17 @@ a {
   color: #fff; }
   .page__title--center {
     text-align: center; }
+
+@media screen and (max-width: 991px) {
+  .page__mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20; } }
 
 .profile {
   margin-top: -5rem; }
@@ -1329,6 +1333,9 @@ a {
   transform: translateY(-50px);
   transition: transform .2s ease-in-out, opacity 0.2s ease-in-out;
   opacity: 0; }
+  @media screen and (max-width: 575px) {
+    .modal__content {
+      padding: 5rem 3rem 3rem; } }
   .modal__content--contact {
     padding-bottom: 2.5rem; }
   .modal__content--story {
@@ -1348,20 +1355,26 @@ a {
     transform: rotate(90deg);
     opacity: 1; }
 
-.madal__footer {
+.modal__footer {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
   font-size: 1.2rem;
   color: #b2b2b2; }
-  .madal__footer li {
+  .modal__footer li {
     margin: 0 0.5rem; }
-  .madal__footer a {
+    @media screen and (max-width: 575px) {
+      .modal__footer li {
+        margin: 0.2rem 0.5rem; } }
+  .modal__footer a {
     margin: 0 0.5rem;
     color: inherit;
     text-decoration: underline; }
-    .madal__footer a:hover {
+    .modal__footer a:hover {
       text-decoration: none; }
+  @media screen and (max-width: 575px) {
+    .modal__footer {
+      flex-direction: column; } }
 
 .modal__video {
   display: block;

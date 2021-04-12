@@ -26,6 +26,9 @@
     transform: translateY(-50px);
     transition: transform .2s ease-in-out, opacity 0.2s ease-in-out;
     opacity: 0;
+    @include breakpoint($mobile-bp){
+        padding: 5rem 3rem 3rem;
+    }
     &--contact{
         padding-bottom: 2.5rem; 
     };
@@ -51,7 +54,7 @@
 
 }
 
-.madal__footer{
+.modal__footer{
     display: flex;
     justify-content: center;
     margin-top: 4rem;
@@ -60,6 +63,9 @@
     color: #b2b2b2;
     li{
         margin: 0 0.5rem;
+        @include breakpoint($mobile-bp){
+            margin: 0.2rem 0.5rem;
+        }
     }
     a{
         margin: 0 0.5rem;
@@ -68,6 +74,9 @@
         &:hover{
             text-decoration: none;
         }
+    }
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
     }
 }
 

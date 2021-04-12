@@ -81,10 +81,21 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/js/modal.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./src/assets/js/mobileNav.js":
+/*!************************************!*\
+  !*** ./src/assets/js/mobileNav.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const burger = document.querySelector(\"#sidebarToggle\")\r\nconst sidebar = document.querySelector(\"#sidebar\")\r\nconst page = document.getElementById(\"page\")\r\nconst body = document.body;\r\n\r\nburger.addEventListener(\"click\", () => {\r\n    document.body.classList.toggle(\"show-sidebar\")\r\n    if(body.classList.contains(\"show-sidebar\")) {\r\n        showSidebar()\r\n    } else {\r\n        closeSidebar();\r\n    }\r\n})\r\n\r\nfunction showSidebar() {\r\n    let mask = document.createElement('div');\r\n    mask.classList.add(\"page__mask\");\r\n    mask.addEventListener(\"click\", closeSidebar);\r\n    page.appendChild(mask);\r\n\r\n    body.classList.add(\"show-sidebar\")\r\n}\r\n\r\nfunction closeSidebar() {\r\n    body.classList.remove(\"show-sidebar\");\r\n    document.querySelector(\".page__mask\").remove()\r\n   \r\n}\n\n//# sourceURL=webpack:///./src/assets/js/mobileNav.js?");
+
+/***/ }),
 
 /***/ "./src/assets/js/modal.js":
 /*!********************************!*\
@@ -93,7 +104,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\r\nconst modalBtn = document.querySelectorAll(\"[data-modal]\")\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll(\".modal__close\")\r\nconst modal = document.querySelectorAll(\".modal\");\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener(\"click\", e => {\r\n        let $this = e.currentTarget;\r\n        let modalId = $this.getAttribute(\"data-modal\")\r\n        let modal = document.getElementById(modalId)\r\n        let modalContent = modal.querySelector(\".modal__content\")\r\n        \r\n        modal.classList.add(\"show\")\r\n        body.classList.add(\"no-scroll\");\r\n\r\n        setTimeout(() => {\r\n            modalContent.style.transform = \"none\";\r\n            modalContent.style.opacity = \"1\";\r\n        },1)\r\n        \r\n\r\n    })\r\n})\r\n\r\n\r\n\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener(\"click\", (e) => {\r\n        let currentModal = e.currentTarget.closest(\".modal\");\r\n        closeModal(currentModal)\r\n    })\r\n})\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener(\"click\", (e) => {\r\n        let currentModal = e.currentTarget;\r\n        closeModal(currentModal)\r\n    })\r\n})\r\n\r\nfunction closeModal(current) {\r\n    let modalContent = current.querySelector(\".modal__content\")\r\n    modalContent.removeAttribute(\"style\")\r\n\r\n    setTimeout(() => {\r\n        \r\n        current.classList.remove(\"show\");\r\n        body.classList.remove(\"no-scroll\");\r\n    }, 200)\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/modal.js?");
+eval("\r\nconst modalBtn = document.querySelectorAll(\"[data-modal]\")\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll(\".modal__close\")\r\nconst modal = document.querySelectorAll(\".modal\");\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener(\"click\", e => {\r\n        let $this = e.currentTarget;\r\n        let modalId = $this.getAttribute(\"data-modal\")\r\n        let modal = document.getElementById(modalId)\r\n        let modalContent = modal.querySelector(\".modal__content\")\r\n        \r\n        modal.classList.add(\"show\")\r\n        body.classList.add(\"no-scroll\");\r\n\r\n        modalContent.addEventListener(\"click\", (e) => {\r\n            e.stopPropagation()\r\n        })\r\n\r\n        setTimeout(() => {\r\n            modalContent.style.transform = \"none\";\r\n            modalContent.style.opacity = \"1\";\r\n        },1)\r\n        \r\n\r\n    })\r\n})\r\n\r\n\r\n\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener(\"click\", (e) => {\r\n        let currentModal = e.currentTarget.closest(\".modal\");\r\n        closeModal(currentModal)\r\n    })\r\n})\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener(\"click\", (e) => {\r\n        let currentModal = e.currentTarget;\r\n        closeModal(currentModal)\r\n    })\r\n})\r\n\r\nfunction closeModal(current) {\r\n    let modalContent = current.querySelector(\".modal__content\")\r\n    modalContent.removeAttribute(\"style\")\r\n\r\n    setTimeout(() => {\r\n        \r\n        current.classList.remove(\"show\");\r\n        body.classList.remove(\"no-scroll\");\r\n    }, 200)\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!*******************************************************************!*\
+  !*** multi ./src/assets/js/mobileNav.js ./src/assets/js/modal.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! D:\\IT\\я developer\\personal-blog\\src\\assets\\js\\mobileNav.js */\"./src/assets/js/mobileNav.js\");\nmodule.exports = __webpack_require__(/*! D:\\IT\\я developer\\personal-blog\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/mobileNav.js_./src/assets/js/modal.js?");
 
 /***/ })
 

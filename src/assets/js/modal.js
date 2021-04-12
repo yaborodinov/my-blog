@@ -14,6 +14,10 @@ modalBtn.forEach(item => {
         modal.classList.add("show")
         body.classList.add("no-scroll");
 
+        modalContent.addEventListener("click", (e) => {
+            e.stopPropagation()
+        })
+
         setTimeout(() => {
             modalContent.style.transform = "none";
             modalContent.style.opacity = "1";
@@ -50,3 +54,5 @@ function closeModal(current) {
         body.classList.remove("no-scroll");
     }, 200)
 }
+
+
